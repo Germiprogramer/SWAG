@@ -94,3 +94,5 @@ Nuestra hipótesis es que implementar el marco SWAG en redes neuronales convoluc
 
 
 # ALGORITMO SHAG CÓDIGO
+
+Hemos escogido este archivo csv porque tenemos diferentes variables con las que podemos trabajar las cuales dependen de un número bastante bajo, lo que nos facilita la tarea.
