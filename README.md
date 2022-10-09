@@ -24,6 +24,13 @@ En este paper, presentamos un tipo de red neuronal en la que las funciones de ac
 También proponemos una nueva arquitectura en la que concatenamos verticalmente muchas capas completamente conectadas para formar una capa que hace que el cálculo sea más eficiente. 
 
 
+## Representación de una función con una base
+
+Supongamos que tenemos un conjunto de datos {xj} para 1 ≤ j ≤ n y etiquetas {yj} que corresponden a nuestro conjunto de datos. Queremos encontrar una función f(x) tal que f(xj) = yj para todo 1 ≤ j ≤ n. El teorema de aproximación de Stone-Weierstrass afirma que cualquier función continua de valor real en un conjunto compacto puede ser aproximada uniformemente por un polinomio. 
+La simplicidad de los sistemas polinómicos los hace muy atractivos desde el punto de vista analítico y computacional. Son fáciles de formar y tienen propiedades bien entendidas. El uso de polinomios de un grado determinado como funciones de activación para todas las neuronas de una misma capa parece desaconsejarse matemáticamente en los entornos tradicionales de las redes neuronales porque no son aproximadores universales. El teorema de Leshno et al. (1993) implica que las redes neuronales totalmente conectadas con un número suficiente de número de neuronas son aproximadores universales si y sólo si las funciones de activación no son polinomios. Observamos que en esta configuración tradicional se supone que la función de activación es la misma para cada neurona de una capa determinada. Ahora damos la siguiente extensión del teorema de aproximación de Stone-Weierstrass:
+
+![c1](https://user-images.githubusercontent.com/91721507/194769192-ab17cfbd-441c-4568-87d0-ffe78794a498.PNG)
+
 
 
 
