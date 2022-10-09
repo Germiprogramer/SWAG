@@ -1,4 +1,24 @@
 import math
+import pandas as pd
+
+def contrasena():
+    df = pd.read_csv('common_passwords.csv')
+    df = df[df['length']<8]
+    df = df[df['length']>5]
+    contrasenas = list(df['password'])
+    i = 0
+    while i<len(contrasenas):
+        try:
+            contrasenas[i] = int(contrasenas[i])
+        except:
+            contrasenas.remove(contrasenas[i])
+        else:
+            if contrasenas[i] == 0:
+                contrasenas.remove(contrasenas[i])
+            else:
+                i=i+1
+    return contrasenas
+        
 
 def rango01(lista):
   nueva = []
@@ -13,7 +33,7 @@ def rango01(lista):
 def rango_max_min(nueva, original):
     nueva = rango01(nueva)
     for i in range(len(nueva)):
-        nueva[i] = round(nueva[i]*(max(original)-1)+1,2)
+        nueva[i] = int(nueva[i]*(max(original)-1)+1)
     return nueva
 
 def capa1(x):
@@ -21,7 +41,7 @@ def capa1(x):
   return x
 
 def capa2(x):
-  x = round(math.sin(x**2),2)
+  x = math.sin(x**2)
   return x
 
 def capa3(x):
