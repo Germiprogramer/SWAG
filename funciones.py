@@ -80,3 +80,15 @@ def x_3(lista):
     for i in range(0, len(lista)):
         lista3.append(lista[i]**3/6)
     return lista3
+
+def separar_y_concatenar(lista):
+    x1 = x_1(lista)
+    x2 = x_2(lista)
+    x3 = x_3(lista)
+    x1 += x2
+    x1 += x3
+    x1.sort()
+    concatenada = []
+    for i in range(0, len(x1), 3):
+        concatenada.append(x1[i])
+    return concatenada

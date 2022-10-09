@@ -1,0 +1,22 @@
+from funciones import *
+
+def main():
+  lt = contrasena()
+  normalizada = rango01(lt)
+  concatenada1 = separar_y_concatenar(normalizada)
+  print("-----------Aplicamos capa 1-----------")
+  f1 = aplicar_capa1(concatenada1)
+  f1.sort()
+  print(f1)
+  print("-----------Aplicamos capa 2-----------")
+  concatenada2 = separar_y_concatenar(f1)
+  f2 = aplicar_capa2(concatenada2)
+  f2.sort()
+  print(f2)
+  print("-----------Aplicamos capa 3-----------")
+  concatenada3 = separar_y_concatenar(f2)
+  f3 = aplicar_capa3(concatenada3)
+  f3.sort()
+  print(f3)
+  print("-----------Resultado final-----------")
+  print(rango_max_min(f3, lt))
