@@ -1,6 +1,6 @@
 # SWAG
 
-
+#Resumen del paper
 ## Introducción
 
 El Deep learning permite modelos computacionales que se componen de múltiples capas de procesamiento y aprender representaciones muy abstractas de datos. Ha habido informes de muchos éxitos utilizando redes neuronales profundas (DNN) en diferentes  áreas. Estos DNN,  nos han permitido resolver problemas difíciles y ha motivado un extenso trabajo para comprender sus propiedades teóricas. 
