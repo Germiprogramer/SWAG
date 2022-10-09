@@ -19,8 +19,11 @@ Sea xj ∈ Rd un punto de datos en nuestro conjunto de datos {xj}j=1  n
 3: Para añadir una tercera y cuarta capa, repita la estructura de las 2 capas anteriores con la entrada de la tercera capa como la salida de la segunda capa. Si se añade    una tercera y cuarta capa entonces la primera dimensión de la matriz utilizada en la segunda capa es un hiperparámetro del modelo.
 4: Continúe añadiendo capas en este patrón como desee.
 5: La matriz utilizada para la última capa de activación lineal tendrá como primera dimensión la dimensión del vector de salida
-La Figura 1 es un diagrama de un ejemplo de SWAG con dos capas y la Figura 3 es un diagrama de un ejemplo de SWAG con cuatro capas.!
+La Figura 1 es un diagrama de un ejemplo de SWAG con dos capas y la Figura 2 es un diagrama de un ejemplo de SWAG con cuatro capas.
 
 
 ![figura_1](https://user-images.githubusercontent.com/91721507/194767980-0547dd8d-9607-4c49-953c-9229a6b3104b.PNG)
 ![figura_2](https://user-images.githubusercontent.com/91721507/194768081-2c1be083-77aa-438d-a853-7bea9137acee.PNG)
+
+
+## Resultados
