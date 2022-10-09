@@ -1,5 +1,6 @@
 # SWAG
 
+https://github.com/Germiprogramer/SWAG.git
 
 # Resumen del paper
 ## Introducción
@@ -107,49 +108,49 @@ El dataset escogido trata acerca de contraseñas. Hemos escogido este archivo cs
 
 Utilizamos la siguiente función para alterar nuestros datos a un rango (0,1), tal y como se explica que se debe hacer en el paper anteriormente resumido.
 
-  def rango01(lista):
-    nueva = []
-    maximo = max(lista)
-    minimo = min(lista)
-    diferencia = maximo - minimo
-    for i in range(len(lista)):
-      nueva.append((lista[i]-minimo) / diferencia)
-    return nueva
-    
+     def rango01(lista):
+       nueva = []
+       maximo = max(lista)
+       minimo = min(lista)
+       diferencia = maximo - minimo
+       for i in range(len(lista)):
+         nueva.append((lista[i]-minimo) / diferencia)
+       return nueva
+
     
 A partir de ahí, empezamos a aplicar distintas "capas", cambiando los valores de las listas. Cada capa es una función numérica.
 
-  def capa1(x):
-    x = (2*x+3)/(x+2)
-    return x
+     def capa1(x):
+       x = (2*x+3)/(x+2)
+       return x
 
-  def capa2(x):
-    x = round(math.sin(x**2),2)
-    return x
+     def capa2(x):
+       x = round(math.sin(x**2),2)
+       return x
 
-  def capa3(x):
-    x = 1/math.log(x,10)
-    return x 
+     def capa3(x):
+       x = 1/math.log(x,10)
+       return x 
 
-  def aplicar_capa1(lista):
-    for i in range(len(lista)):
-      lista[i] = capa1(lista[i])
-    return lista
+     def aplicar_capa1(lista):
+       for i in range(len(lista)):
+         lista[i] = capa1(lista[i])
+       return lista
 
-  def aplicar_capa2(lista):
-    for i in range(len(lista)):
-      lista[i] = capa2(lista[i])
-    return lista
+     def aplicar_capa2(lista):
+       for i in range(len(lista)):
+         lista[i] = capa2(lista[i])
+       return lista
 
-  def aplicar_capa3(lista):
-    for i in range(len(lista)):
-      lista[i] = capa3(lista[i])
-    return lista
+     def aplicar_capa3(lista):
+       for i in range(len(lista)):
+         lista[i] = capa3(lista[i])
+       return lista
 
 Tras aplicar todas las capas, volvemos al rango numérico inicial.
 
-  def rango_max_min(nueva, original):
-      nueva = rango01(nueva)
-      for i in range(len(nueva)):
-          nueva[i] = round(nueva[i]*(max(original)-1)+1,2)
-      return nueva
+    def rango_max_min(nueva, original):
+        nueva = rango01(nueva)
+        for i in range(len(nueva)):
+            nueva[i] = round(nueva[i]*(max(original)-1)+1,2)
+        return nueva
