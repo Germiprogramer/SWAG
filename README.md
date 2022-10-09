@@ -25,6 +25,8 @@ En este paper, presentamos un tipo de red neuronal en la que las funciones de ac
 También proponemos una nueva arquitectura en la que concatenamos verticalmente muchas capas completamente conectadas para formar una capa que hace que el cálculo sea más eficiente. 
 
 
+
+
 ## Representación de una función con una base
 
 Supongamos que tenemos un conjunto de datos {xj} para 1 ≤ j ≤ n y etiquetas {yj} que corresponden a nuestro conjunto de datos. Queremos encontrar una función f(x) tal que f(xj) = yj para todo 1 ≤ j ≤ n. El teorema de aproximación de Stone-Weierstrass afirma que cualquier función continua de valor real en un conjunto compacto puede ser aproximada uniformemente por un polinomio. 
@@ -73,3 +75,20 @@ Para nuestro experimento final, ejecutamos SWAG en el conjunto de datos de escri
 
 
 ![figura_15_16](https://user-images.githubusercontent.com/91721507/194768640-bae49e9f-bf0c-4728-8460-3c8389426006.PNG)
+
+
+
+
+## Discusión
+
+En este trabajo, presentamos un conjunto de funciones de activación y una nueva arquitectura. Nombramos esto arquitectura SWAG. La primera capa de nuestra arquitectura tiene al menos k neuronas donde k es el grado del polinomio para la estimación de la función g(x) tal que g(xj) = yj para todo 1 ≤ j ≤ n; este capa tiene k funciones de activación diferentes {x^p/p!}^k , p=1
+                          
+La segunda capa es una capa totalmente conectada con una función de activación lineal.
+A partir de aquí, hemos visto que  creando un conjunto de datos aleatorios con funciones no lineales muy complicadas y evaluamos la efectividad de SWAG, descubrimos que puede aproximar las funciones mejor que los métodos tradicionales de aprendizaje profundo.
+
+Tambien observamos que hay muchos conjuntos de bases que pueden estimar una función con precisión arbitraria. Nuestra conjetura es que la base ortogonal proporcionará una ventaja en algunos casos. Por otra parte , creemos que una estimación de Taylor de nuestro conjunto de datos aumentará el rendimiento de SWAG después de la inicialización.
+
+Además, encontramos especialmente interesante la cuestión de cómo implementar esta arquitectura en redes neuronales convolucionales y recursivas. Las redes neuronales convolucionales han superado la precisión lograda con redes neuronales completamente conectadas en el conjunto de datos MNIST y también reducen la cantidad de parámetros necesarios para entrenar una red neuronal completamente conectada.
+
+Nuestra hipótesis es que implementar el marco SWAG en redes neuronales convolucionales y recursivas nos permitirá reducir aún más los parámetros, hacer que nuestro modelo converja aún más rápido y obtenga una mayor precisión que la que es posible actualmente.
+
