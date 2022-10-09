@@ -1,0 +1,15 @@
+[[package]]
+name = "keras"
+version = "2.10.0"
+description = "Deep learning for humans."
+category = "main"
+optional = false
+python-versions = "*"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.8"
+content-hash = "ff71d89d30f08a7d27acb98a8e644dcd762f5358d6b6645bd3af063bbefecb08"
+
+[metadata.files]
+keras = []
