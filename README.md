@@ -1,5 +1,7 @@
 # SWAG
 
+Los miembros del grupo son : Germán Llorente, Gonzalo Martínez, Alex Muñoz, Carlos Puigserver
+
 https://github.com/Germiprogramer/SWAG.git
 
 # Resumen del paper
