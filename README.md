@@ -27,3 +27,9 @@ La Figura 1 es un diagrama de un ejemplo de SWAG con dos capas y la Figura 2 es 
 
 
 ## Resultados
+
+Para nuestro experimento final, ejecutamos SWAG en el conjunto de datos de escritura manual de MNIST (LC10). El conjunto de datos de datos se compone de un total de 70.000 imágenes, todas las cuales son muestras únicas de escritura a mano de los números del 0 al 9. Aplanamos estas imágenes en vectores de tamaño (784, 1) y las utilizamos como entradas para una DNN tradicional, así como a SWAG. La DNN tradicional tenía tres capas ocultas. En la primera y segunda capa utilizamos ReLU como función de activación con 1024 neuronas en cada capa. En la tercera capa utilizamos Softmax como función de activación con 10 neuronas. Para nuestra implementación de SWAG, utilizamos l = 500, k = 7 y 2 capas. Utilizamos un conjunto de entrenamiento que consistía en 60.000 imágenes, y un conjunto de prueba que consistía en 10.000 imágenes. En el método tradicional obtuvimos una precisión en la prueba de 0,9767 después de 4 épocas. SWAG consiguió una precisión de prueba de 0,9787 después de 4 épocas. Los resultados se muestran en la Figura 15 y la Figura 16.
+
+
+
+![figura_15_16](https://user-images.githubusercontent.com/91721507/194768640-bae49e9f-bf0c-4728-8460-3c8389426006.PNG)
