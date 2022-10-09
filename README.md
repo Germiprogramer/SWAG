@@ -1,6 +1,32 @@
 # SWAG
 
 
+## Introducción
+
+El Deep learning permite modelos computacionales que se componen de múltiples capas de procesamiento y aprender representaciones muy abstractas de datos. Ha habido informes de muchos éxitos utilizando redes neuronales profundas (DNN) en diferentes  áreas. Estos DNN,  nos han permitido resolver problemas difíciles y ha motivado un extenso trabajo para comprender sus propiedades teóricas. 
+
+El proceso de cómo entrenar efectivamente un DNN es una tarea complicada. Características como la naturaleza de las funciones de activación,las arquitecturas de red… pueden afectar el proceso de entrenamiento de una red neuronal.
+En particular, algunas opciones de estas características pueden causar pérdida de información o pueden aumentar la cantidad de tiempo necesario para entrenar una DNN.
+La cuestión de cómo encontrar efectivamente el mejor conjunto de funciones de activación no lineales es un desafío. Algunas de las funciones de activación no lineales más conocidas son:
+
+sigmoid(x) = 1/(1 + e^−X )                        (1) 
+
+tanh(x) = (1 − e^−2X )/(1 + e^−2X )               (2)
+
+ReLU(x) = max(x; 0)                               (3)
+ 
+ La función de activación en la ecuación (3) Unidad Lineal Rectificada (ReLU), es la más popular y la más utilizada.
+
+
+Chung ha propuesto funciones de activación no lineales entrenables que utilizaron una aproximación de serie de Taylor de sigmoides, tanh y ReLU como un punto de inicialización para sus funciones de activación, y entrenaron los coeficientes de la aproximación de serie de Taylor para optimizar el entrenamiento. Esta implementación utilizó la misma función polinomial en cada neurona de una capa determinada. 
+
+En este paper, presentamos un tipo de red neuronal en la que las funciones de activación en cada capa forman una base polinomial. 
+También proponemos una nueva arquitectura en la que concatenamos verticalmente muchas capas completamente conectadas para formar una capa que hace que el cálculo sea más eficiente. 
+
+
+
+
+
 
 
 
