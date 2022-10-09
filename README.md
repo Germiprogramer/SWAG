@@ -93,6 +93,12 @@ Además, encontramos especialmente interesante la cuestión de cómo implementar
 Nuestra hipótesis es que implementar el marco SWAG en redes neuronales convolucionales y recursivas nos permitirá reducir aún más los parámetros, hacer que nuestro modelo converja aún más rápido y obtenga una mayor precisión que la que es posible actualmente.
 
 
+
+
+
+
+
+
 # ALGORITMO SHAG CÓDIGO
 
 Hemos escogido este archivo csv porque tenemos diferentes variables con las que podemos trabajar las cuales dependen de un número bastante bajo, lo que nos facilita la tarea.
