@@ -96,18 +96,32 @@ Además, encontramos especialmente interesante la cuestión de cómo implementar
 Nuestra hipótesis es que implementar el marco SWAG en redes neuronales convolucionales y recursivas nos permitirá reducir aún más los parámetros, hacer que nuestro modelo converja aún más rápido y obtenga una mayor precisión que la que es posible actualmente.
 
 
-
-
-
-
-
-
-# ALGORITMO SHAG CÓDIGO
+# ALGORITMO SWAG CÓDIGO
 
 El dataset escogido trata acerca de contraseñas. Hemos escogido este archivo csv porque tenemos diferentes variables con las que podemos trabajar las cuales dependen de un número bastante bajo, lo que nos facilita la tarea. El algoritmo SWAG nos permite "cifrar" nuestras contraseñas con distintas capas.
 
 ## EXPLICACIÓN DEL CÓDIGO
 
+Debido a que en nuestro dataset no todas las contraseñas son numericas, al leerlo seleccionamos solo las filas que la columna "password" se pueda leer como un int. Ademas, debido a que tienen una longitud muy dispersa, seleccionamos solo las filas que la columna "length" sea mayor que 5 y menor que 8; y finalmente eliminamos los 0 para que estos no influyan en los calculos. 
+```
+def contrasena():
+    df = pd.read_csv('common_passwords.csv')
+    df = df[df['length']<8]
+    df = df[df['length']>5]
+    contrasenas = list(df['password'])
+    i = 0
+    while i<len(contrasenas):
+        try:
+            contrasenas[i] = int(contrasenas[i])
+        except:
+            contrasenas.remove(contrasenas[i])
+        else:
+            if contrasenas[i] == 0:
+                contrasenas.remove(contrasenas[i])
+            else:
+                i=i+1
+    return contrasenas
+```    
 Utilizamos la siguiente función para alterar nuestros datos a un rango (0,1), tal y como se explica que se debe hacer en el paper anteriormente resumido.
 
      def rango01(lista):
@@ -119,7 +133,20 @@ Utilizamos la siguiente función para alterar nuestros datos a un rango (0,1), t
          nueva.append((lista[i]-minimo) / diferencia)
        return nueva
 
-    
+Una vez hemos hecho esto con nuestros valores, transformamos cada uno en otros tres mediante esta formula xp = x^p/p¡, y luego los concatenamos. Esto lo haremos despues de aplicar cada funcion.
+```
+def separar_y_concatenar(lista):
+    x1 = x_1(lista)
+    x2 = x_2(lista)
+    x3 = x_3(lista)
+    x1 += x2
+    x1 += x3
+    x1.sort()
+    concatenada = []
+    for i in range(0, len(x1), 3):
+        concatenada.append(x1[i])
+    return concatenada
+```    
 A partir de ahí, empezamos a aplicar distintas "capas", cambiando los valores de las listas. Cada capa es una función numérica.
 
      def capa1(x):
