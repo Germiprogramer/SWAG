@@ -32,6 +32,12 @@ La simplicidad de los sistemas polinómicos los hace muy atractivos desde el pun
 ![c1](https://user-images.githubusercontent.com/91721507/194769192-ab17cfbd-441c-4568-87d0-ffe78794a498.PNG)
 
 
+Demostración. Obsérvese que {σp}^∞  desde p=0 es una base para el espacio vectorial de polinomios sobre R. Así que como sabemos sabemos que los polinomios son densos en C(Xn) por el teorema de aproximación de Stone-Weierstrass el resultado es el siguiente:
+
+Este corolario implica que si permitimos un conjunto diverso de funciones de activación polinómica en
+una capa particular seguiremos teniendo el resultado de la capacidad de aproximación universal de las redes neuronales feedfoward. Utilizando el mismo marco que Leshno et al. (1993), en el que la salida se suponía en Rn se puede obtener fácilmente una extensión a dimensiones superiores
+redefiniendo σp{w} como una operación puntual que toma cada elemento de w y lo eleva al grado de p por ejemplo, dado w = [2, 3], entonces σ4{w} = [2^4, 3^4].
+
 
 
 
